@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+
+  /* <--Color Primary--> */
+
+  --picton-blue-50: #eff9ff;
+  --picton-blue-100: #def2ff;
+  --picton-blue-200: #b6e8ff;
+  --picton-blue-300: #75d7ff;
+  --picton-blue-400: #2cc4ff;
+  --picton-blue-500: #00b2ff;
+  --picton-blue-600: #008ad4;
+  --picton-blue-700: #006dab;
+  --picton-blue-800: #005c8d;
+  --picton-blue-900: #064d74;
+  --picton-blue-950: #04314d;
+
+  /* <--Color Neutrals--> */
+
+  --white: #ffffff;
+  --dove-gray-50: #f6f6f6;
+  --dove-gray-100: #e7e7e7;
+  --dove-gray-200: #d1d1d1;
+  --dove-gray-300: #b0b0b0;
+  --dove-gray-400: #888888;
+  --dove-gray-500: #6d6d6d;
+  --dove-gray-600: #5d5d5d;
+  --dove-gray-700: #4f4f4f;
+  --dove-gray-800: #454545;
+  --dove-gray-900: #3d3d3d;
+  --dove-gray-950: #262626;
+  --black: #000000;
+
+  --background: #eff9ff;
+  --background-card: var(--white);
+  --title-main-color: var(--dove-gray-800);
+  --subTitle-color: var(--dove-gray-700);
+  --subTitle-2-color: var(--dove-gray-300);
+  --p-color: var(--dove-gray-700);
+  --container-hero-color: var(--dove-gray-200);
+  --acent-color: var(--picton-blue-800);
+  --acent-color-active: var(--picton-blue-700);
+
+  /* <--Typography--> */
+
+  font-family: Roboto Mono, Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --font-headings: 'Roboto Mono', monospace;
+  --font-body: 'Roboto', sans-serif;
+  --font-buttons: 'Inter', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text-size-h1: 58px;
+  --text-size-h2: 38px;
+  --text-size-h3: 24px;
+  --text-size-h4: 20px;
+  --text-size-p: 14px;
+  --text-size-btn-S: 14px;
+  --text-size-btn-M: 16px;
+  --text-size-btn-L: 18px;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212; */
+}
+
+:root[data-theme="dark"] {
+  --background: #121212;
+  --background-card: #1E1E1E;
+  --title-main-color: var(--white);
+  --subTitle-color: var(--dove-gray-300);
+  --subTitle-2-color: var(--dove-gray-500);
+  --p-color: var(--white);
+  --container-hero-color: var(--dove-gray-900);
+  --acent-color: var(--picton-blue-300);
+  --acent-color-active: var(--picton-blue-200);
+
+  .btn-nav:hover {
+    color: var(--dove-gray-500);
+  }
+
+  .light-btn {
+    visibility: visible;
+    transition: top 1s ease-in-out,
+      opacity 1s ease-in-out,
+      visibility 1s ease-in-out,
+      border 500ms ease-in-out;
+  }
+
+  .light-btn:hover {
+    border: 3px;
+  }
+
+  .light-btn:active {
+    top: 20%;
+    opacity: 0;
+  }
+
+  .dark-btn {
+    transition: top 1s ease-in-out,
+      opacity 1s ease-in-out;
+    visibility: hidden;
+  }
+
+  .dark-btn:active {
+    top: 10%;
+    opacity: 0;
+  }
+
+  .footerHero-links img {
+    filter: invert(50%);
+  }
+
+  .footerHero-links img:hover {
+    filter: opacity(100%);
+  }
+
+  .footer-links img {
+    filter: invert(50%);
+  }
+
+  .footer-links img:hover {
+    filter: opacity(100%);
+  }
+
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  /* text-decoration: inherit; */
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+   margin: 0 3rem;
+  /*display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.button {
+  /* border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s; */
+
+  text-decoration: none;
+  color: var(--background);/* Buttons/Button Small */
+  font-family: var(--font-buttons);
+  font-size: var(--text-size-btn-S);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  display: inline-flex;
+  
+  justify-content: center;
+  align-items: center;
+  gap: 8px; 
+
+  height: 60px;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--acent-color)
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
