@@ -1,7 +1,12 @@
+import { Link } from 'react-router-dom';
 import githubIcon from '../assets/icons/social/bxl-github.svg'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
 
 function Footer() {
+    // Función que desplaza la página a la parte superior
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <footer id="contacto" className="container-footer">
             <section className="footer-contact">
@@ -10,7 +15,7 @@ function Footer() {
             </section>
 
             <section className="container-footer-links">
-                <div className  ="footer-links">
+                <div className="footer-links">
                     <a href="https://github.com/danieltb92">
                         <img src={githubIcon} alt="Logo github"></img>
                     </a>
@@ -49,7 +54,9 @@ function Footer() {
 
             </section>
 
-            <a href="https://daniel-tunjano.onrender.com"><img src={logoDT} alt="Logo Daniel Tunjano"></img></a>
+            <Link to="/" onClick={scrollToTop}>
+                <img src={logoDT} alt="Logo Daniel Tunjano"></img>
+            </Link>
             <h5>© Daniel Tunjano. 2023</h5>
         </footer>
     )
