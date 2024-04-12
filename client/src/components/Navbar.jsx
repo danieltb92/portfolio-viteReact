@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import '../App.css'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
 
@@ -8,7 +9,9 @@ function Navbar({ showMenuItems }) {
         <nav className='w-full'>
             <header className="container-navbar max-w-screen-xl">
                 <div className="container-navbar-logo">
-                    <img className="navbar-logo" src={logoDT} alt="Logotipo Daniel Tunjano"></img>
+                    <Link to="/">
+                        <img className="navbar-logo" src={logoDT} alt="Logotipo Daniel Tunjano"></img>
+                    </Link>
                     <span className="navbar-name"> {">"} Daniel Tunjano</span>
                 </div>
                 <i className="btn-menu">
