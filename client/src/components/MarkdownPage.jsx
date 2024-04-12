@@ -1,10 +1,16 @@
 import ReactMarkdown from 'react-markdown';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Divider from '../components/Divider';
 
 const MarkdownPage = ({ content, title }) => {
+   // useEffect para modificar el título de la pestaña del navegador.
+   useEffect(() => {
+    // Cambia el título del documento al título proporcionado.
+    document.title = title;
+  }, [title]);
   return (
           <div className='markdown-page max-w-screen-lg'>
             <Navbar className='w-full' showMenuItems={false}></Navbar>
