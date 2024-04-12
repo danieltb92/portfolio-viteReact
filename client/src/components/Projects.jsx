@@ -1,6 +1,5 @@
-// import { useFetch } from '../services/useFetch'
 import { useState, useEffect } from "react";
-// import { getProjects } from "../services/notion.js"
+import { Link } from "react-router-dom";
 
 
 function Projects() {
@@ -26,55 +25,46 @@ function Projects() {
 
             <section className="grid-projects">
                 {projects.map((project) => (
-                    (project.status === 'Published') && (
+                    project.status === 'Published' && (
                         <article className="project-card" key={project.id}>
-                            <a href={`http://localhost:5173/page/${project.id}`} target="_blank">
+                            <Link to={`/page/${project.id}`}>
                                 <img src={project.cover} alt="imagen proyecto" />
                                 <h3>{project.title}</h3>
                                 <div className="divider-card"></div>
                                 <p>{project.type}</p>
-                            </a>
+                            </Link>
                         </article>
                     )
                 ))}
             </section>
         </div>
-
-
-        // projects.forEach((project) => {
-        //     if (project.status === 'Published') {
-
-        //       <article className="project-card">
-        //         <a href ="views/${project.id}/${project.id}.html" target="_blank"></a>
-        //         <a href ="http://localhost:5000/${project.id}" target="_blank">
-        //           <img src=" ${project.cover}" alt="imagen proyecto"></img>
-        //           <h3> ${project.title}</h3>
-        //           <div className="divider-card"></div>
-        //           <p>${project.type}</p>
-        //         </a>
-        //       </article>
-
-
-        //     }
-        //   })
-
-
-
-
-
     )
 }
 export default Projects;
 
-// function Pages() {
-//     const [pages, setPages] = useState([]);
+
+
+// */ Funcion que genera en el Link una propiedad target:blank /*
+// const CustomLink = ({ to, target, children }) => {
+//     if (target === '_blank') {
+//         return (
+//             <a href={to} target={target}>
+//                 {children}
+//             </a>
+//         );
+//     }
+//     return <Link to={to}>{children}</Link>;
+// };
+
+// function Projects() {
+//     const [projects, setProjects] = useState([]);
 
 //     useEffect(() => {
 //         async function fetchData() {
 //             try {
-//                 const response = await fetch("http://localhost:4000/pages-md");
+//                 const response = await fetch("http://localhost:4000/projects");
 //                 const data = await response.json();
-//                 setPages(data);
+//                 setProjects(data);
 //             } catch (error) {
 //                 console.log("Error fetching projects:", error);
 //             }
@@ -83,14 +73,25 @@ export default Projects;
 //     }, []);
 
 //     return (
-//         <div>
-//             <h1>Pages</h1>
-//             <ul>
-//                 {pages.map((page) => (
-//                     <li key={page.id}>{page.title}</li>
+//         <div id="proyectos" className="container-projects">
+//             <h2>Proyectos</h2>
+
+//             <section className="grid-projects">
+//                 {projects.map((project) => (
+//                     project.status === 'Published' && (
+//                         <article className="project-card" key={project.id}>
+//                             <CustomLink to={`/page/${project.id}`} target="_blank">
+//                                 <img src={project.cover} alt="imagen proyecto" />
+//                                 <h3>{project.title}</h3>
+//                                 <div className="divider-card"></div>
+//                                 <p>{project.type}</p>
+//                             </CustomLink>
+//                         </article>
+//                     )
 //                 ))}
-//             </ul>
+//             </section>
 //         </div>
 //     );
 // }
-// export default Pages;
+
+// export default Projects;
