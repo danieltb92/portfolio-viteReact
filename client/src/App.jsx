@@ -1,60 +1,41 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-
-// import './App.css'
-// import { Route, Routes } from 'react-router-dom'
-// import Home from './pages/Home'
-// // import { projects } from './services/notion'
-
-// function App() {
-
-//   return (
-//     <div className='flex flex-col'>
-//       <Routes>
-//         <Route path='/'element={<Home />}/>
-//         {/* <Route path='/projects' Component={<projects />}/> */}
-//       </Routes>
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-
-
-
 import './App.css';
 import { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
-import MarkdownPage from './components/MarkdownPage'; // Importar el componente
+import MarkdownPage from './components/MarkdownPage';
 
-// Función para obtener las páginas desde la fuente de datos (modifique según tu implementación)
+
+// Función para obtener las páginas desde la fuente de datos URL 
 const getPages = async () => {
   try {
     // Simulando la obtención de datos del servidor
-    const proyectos = await fetch('http://localhost:4000/pages-md');
-    const datos = await proyectos.json();
+    const projects = await fetch('http://localhost:4000/pages-md');
+    const data = await projects.json();
 
-    const paginasMarkdown = datos.map((item) => ({
+    // Obteniendo datos de cada una de las paginas provenientes de la URL
+    // Y uniendolo a un valor
+    const paginasMarkdown = data.map((item) => ({
       path: `/page/${item.slug}`, // Define la ruta basada en el ID
       id: item.id,
-      content: item.content,
-      title: item.title, // Asumiendo que tienes un título en el JSON
+      content: item.content, // Define el contenido de la pagina
+      title: item.title, // Define el titulo de la pagina
     }));
 
-    return paginasMarkdown;
+    return paginasMarkdown; // Retorna los datos anteriores de cada una de las paginas de la URL 
   } catch (error) {
     console.error('Error al obtener las páginas:', error);
     return [];
   }
 };
 
-function App() {
-  const [paginas, setPaginas] = useState([]);
 
+// Funcion que genera las rutas de las paginas de la URL
+// Y las rutas de las paginas standard
+function App() {
+
+
+  const [paginas, setPaginas] = useState([]);
+  // UseEffect para obtener los datos de la funcion anterior getPages de manera asincrona 
   useEffect(() => {
     const fetchPages = async () => {
       const markdownPages = await getPages();
@@ -64,24 +45,24 @@ function App() {
     fetchPages();
   }, []);
 
-  return (
+
+  return (  // Retorna las rutas generales y las generadas con automatizacion
     <BrowserRouter>
-      <div className='flex flex-col'>
         <Routes>
-          <Route path='/' element={<Home />} />
-          {paginas.map((pagina) => (
+          <Route path='/' element={<Home />} />   {/* // Ruta de la pagina principal */}
+          {paginas.map((pagina) => (   // funcion que mapea cada pagina y genera una ruta para cada una con los datos
+
             <Route
               key={pagina.id}
               exact
               path={pagina.path}
               element={
-                <MarkdownPage content={pagina.content} title={pagina.title} // Usa el título si está disponible
-                ></MarkdownPage>
+                <MarkdownPage content={pagina.content} title={pagina.title}></MarkdownPage>
               }
             />
+
           ))}
         </Routes>
-      </div>
     </BrowserRouter>
   );
 }
