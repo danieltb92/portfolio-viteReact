@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import MarkdownPage from './components/MarkdownPage';
+import ScrollToTop from './components/ScrollToTop';
 
 
 // Función para obtener las páginas desde la fuente de datos URL 
@@ -48,21 +49,22 @@ function App() {
 
   return (  // Retorna las rutas generales y las generadas con automatizacion
     <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />   {/* // Ruta de la pagina principal */}
-          {paginas.map((pagina) => (   // funcion que mapea cada pagina y genera una ruta para cada una con los datos
+      <ScrollToTop></ScrollToTop>
+      <Routes>
+        <Route path='/' element={<Home />} />   {/* // Ruta de la pagina principal */}
+        {paginas.map((pagina) => (   // funcion que mapea cada pagina y genera una ruta para cada una con los datos
 
-            <Route
-              key={pagina.id}
-              exact
-              path={pagina.path}
-              element={
-                <MarkdownPage content={pagina.content} title={pagina.title}></MarkdownPage>
-              }
-            />
+          <Route
+            key={pagina.id}
+            exact
+            path={pagina.path}
+            element={
+              <MarkdownPage content={pagina.content} title={pagina.title}></MarkdownPage>
+            }
+          />
 
-          ))}
-        </Routes>
+        ))}
+      </Routes>
     </BrowserRouter>
   );
 }
