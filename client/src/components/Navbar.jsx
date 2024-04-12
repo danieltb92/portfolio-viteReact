@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../App.css'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
 
@@ -44,5 +45,8 @@ function Navbar({ showMenuItems }) {
         </nav>
     )
 }
+Navbar.propTypes = {
+    showMenuItems: PropTypes.bool.isRequired,
+  };
 
 export default Navbar;
