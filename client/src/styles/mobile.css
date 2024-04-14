@@ -1,0 +1,129 @@
+/* @import "style.css"; */
+
+@media (max-width: 570px) {
+
+    body{
+        margin: 0 1rem;
+    }
+    .container-navbar{
+        padding: 10px 0;
+    }
+    /* <---- SIDEBAR ----> */
+
+    .sidebar{
+        width: 50vw;
+    }
+
+    /* <---- HERO ----> */
+
+    .container-hero{
+        /* height: auto; */
+        margin-bottom: 20px;
+    }
+    .hero{
+        margin: 10px 0 30px 0;
+        padding: 10px 0;
+        height: 75vh;
+        gap: 20px;
+    }
+    .hero img{
+        height: 10rem; /*230px - 14.4rem*/
+        margin: 10px;
+    }
+    .hero-title{
+        width: 80%;
+        /* align-items: center; */
+        margin: 0px;
+        padding: 0px;
+    }
+    .hero-title h1{
+        font-size: 1.5rem; /*var(--text-size-h2)*/
+        line-height: 45px;
+        letter-spacing: -1px;
+    }
+    .hero h1 span{
+        font-size: 3rem; /*var(--text-size-h2)*/
+    }
+    .container-footerHero{
+        flex-direction: column-reverse;
+        align-items: end;
+    }
+    .footerHero-description h3{
+        font-size: var(--text-size-h4);
+    }
+    .footerHero-description h4{
+        font-size: var(--text-size-h5);
+    }
+    .footerHero-links{
+        width: 100%;
+        justify-content: center;
+    }
+    .light-btn{
+        top: 5%;
+        right: 4%;
+    }
+    .dark-btn{
+        top: 8%;
+        right: 4%;
+    }
+
+    /* <------ About me -----> */
+
+    .container-aboutme{
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0; 
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d";
+    }
+
+    .container-aboutme{
+        padding: 40px 20px;
+    }
+    .container-aboutme h2{
+        justify-content: start;
+        font-size: var(--text-size-h2);
+        min-width: 240px;
+        max-width: 100%;
+    }
+    .container-aboutme p{
+        margin-right: 0;
+        width: 100%;
+    }
+    /* .container-aboutme .button{
+        height: 50px;
+        width: 50px;
+        padding: 0;
+    } */
+
+    /* <---- SKILLs ----> */
+    .container-skills{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "a a"
+        "b b"
+        "c c"
+        "d d";
+    }
+    .title-skills h2{
+        margin-left: 0px; 
+        text-align: center;
+    }
+    .container-skills-lenguage{
+        margin-left: 0;
+    }
+
+     /* <---- PROJECTS ----> */
+
+    .container-projects h2{
+    margin-left: 0px; 
+    text-align: center;
+    }
+    .project-card img{
+        object-fit: cover;  
+        height: 200px;
+    }
+}
+
