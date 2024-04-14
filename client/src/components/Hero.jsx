@@ -8,18 +8,18 @@ function Hero() {
 
     return (
     <section id="home" className="container-hero max-w-screen-xl">
-        <div className="hero">
+        <div className="hero px-5 ">
             {/* <i className="light-btn"><box-icon name='sun' color='#e7e7e7'></box-icon></i>
             <i className="dark-btn"><box-icon name='moon' color='#454545' ></box-icon></i> */}
-            <img className="m-5 h-[15rem]" src={logoAvatar} alt="Logo Avata"></img>
-            <div className="hero-title flex flex-col w-[500px] m-5"> 
+            <img className="" src={logoAvatar} alt="Logo Avata"></img>
+            <div className="hero-title w-[500px] m-5 max-md:w-full"> 
                 <h1 className="text-start">¡Hola!, soy </h1> 
                 <h1 className="text-start"><span className="D text-primary">Daniel</span></h1>
                 <h1 className="text-end"><span className="T text-primary">Tunjano</span></h1>
             </div>
         </div>
     
-        <div className="container-footerHero flex items-start justify-between max-xl:w-full">
+        <div className="container-footerHero ">
             <div className="footerHero-links flex items-center gap-4">
                 <a href="https://github.com/danieltb92" target="_blank" rel="noopener"> 
                 <img src={githubIcon} alt="icono Github"></img>
