@@ -1,3 +1,4 @@
+import '../styles/markdownPage.css'
 import ReactMarkdown from 'react-markdown';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
