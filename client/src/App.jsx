@@ -1,4 +1,6 @@
-import './App.css';
+import './styles/App.css';
+import './styles/mobile.css';
+import './styles/tablet.css';
 import { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
@@ -48,24 +50,27 @@ function App() {
 
 
   return (  // Retorna las rutas generales y las generadas con automatizacion
-    <BrowserRouter>
-      <ScrollToTop></ScrollToTop>
-      <Routes>
-        <Route path='/' element={<Home />} />   {/* // Ruta de la pagina principal */}
-        {paginas.map((pagina) => (   // funcion que mapea cada pagina y genera una ruta para cada una con los datos
+    <>
+      <div className="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div></div>
+      <BrowserRouter>
+        <ScrollToTop></ScrollToTop>
+        <Routes>
+          <Route path='/' element={<Home />} />   {/* // Ruta de la pagina principal */}
+          {paginas.map((pagina) => (   // funcion que mapea cada pagina y genera una ruta para cada una con los datos
 
-          <Route
-            key={pagina.id}
-            exact
-            path={pagina.path}
-            element={
-              <MarkdownPage content={pagina.content} title={pagina.title}></MarkdownPage>
-            }
-          />
+            <Route
+              key={pagina.id}
+              exact
+              path={pagina.path}
+              element={
+                <MarkdownPage content={pagina.content} title={pagina.title}></MarkdownPage>
+              }
+            />
 
-        ))}
-      </Routes>
-    </BrowserRouter>
+          ))}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
