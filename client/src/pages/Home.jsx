@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import '../App.css'
+import '../styles/App.css'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Divider from '../components/Divider'
@@ -23,7 +23,7 @@ function Home() {
 }, []); // Pasa un array vacío para que solo se ejecute al montar y desmontar
 
   return (
-    <div className='flex flex-col'>
+    <>
       <nav>
         <Navbar showMenuItems={true}></Navbar> 
       </nav>
@@ -39,7 +39,7 @@ function Home() {
         <Divider></Divider>
         <Footer></Footer>
       </main>
-    </div>
+    </>
   )
 }
 
