@@ -3,6 +3,10 @@ import githubIcon from '../assets/icons/social/bxl-github.svg'
 import linkedinIcon from '../assets/icons/social/bxl-linkedin.svg' 
 // import whatsappIcon from './assets/icons/social/bxl-whatsapp.svg'  
 import emailIcon from '../assets/icons/social/bx-envelope.svg' 
+import { basics, hero } from '../../cv.json'
+
+const { firstname, lastname, label, label2 } = basics
+const { titleHero } = hero
 
 function Hero() {
 
@@ -13,9 +17,9 @@ function Hero() {
             <i className="dark-btn"><box-icon name='moon' color='#454545' ></box-icon></i> */}
             <img className="" src={logoAvatar} alt="Logo Avata"></img>
             <div className="hero-title w-[500px] m-5 max-md:w-full"> 
-                <h1 className="text-start">¡Hola!, soy </h1> 
-                <h1 className="text-start"><span className="D text-primary">Daniel</span></h1>
-                <h1 className="text-end"><span className="T text-primary">Tunjano</span></h1>
+                <h1 className="text-start">{titleHero}</h1> 
+                <h1 className="text-start"><span className="D text-primary">{firstname}</span></h1>
+                <h1 className="text-end"><span className="T text-primary">{lastname}</span></h1>
             </div>
         </div>
     
@@ -33,7 +37,7 @@ function Hero() {
             </div>
     
             <div className="footerHero-description">
-                <h3>Diseñador UX UI, Industrial &<br></br>  Desarrollador Fronted Jr.</h3>
+                <h3>{label}<br></br>{label2}</h3>
                 <h4>| design & code.</h4>
             </div>
         </div>

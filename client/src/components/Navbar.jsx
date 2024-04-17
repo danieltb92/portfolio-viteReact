@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/App.css'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
+import { navbar } from '../../cv.json'
+
+const { home, about, work, contact } = navbar
 
 // function Navbar({ showMenuItems }) {
 //     const [ showMenu, setShowMenu] = useState(false);
@@ -99,10 +102,10 @@ function Navbar({ showMenuItems }) {
                 {/* Menú de navegación normal para pantallas grandes */}
                 {showMenu && (
                     <nav className="navbar">
-                        <a className="btn-nav" href="#home">Home</a>
-                        <a className="btn-nav" href="#proyectos">Proyectos</a>
-                        <a className="btn-nav" href="#sobreMi">Sobre mi</a>
-                        <a className="btn-nav" href="#contacto">Contacto</a>
+                        <a className="btn-nav" href="#home">{home}</a>
+                        <a className="btn-nav" href="#proyectos">{work}</a>
+                        <a className="btn-nav" href="#sobreMi">{about}</a>
+                        <a className="btn-nav" href="#contacto">{contact}</a>
                     </nav>
                 )}
             </header>
