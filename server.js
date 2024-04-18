@@ -23,12 +23,17 @@ app.get('/projects', async (req, res) => {
   })
 
 app.get('/pages-md', async (req, res) => {
-  // const pagesMd = "Holaaaaaaaaaaaa";
   const pagesMd = await getPagesMd()
   // console.log(pagesMd)
   res.json(pagesMd)
 });
 
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
+
+// Redirigir todas las rutas no reconocidas al index.html de React
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+});
 
 app.listen(PORT, HOST, () => {
   console.log("Server running on port http://" + HOST + ":" + PORT);
