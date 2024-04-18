@@ -1,6 +1,12 @@
 {
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    
+    "start-sc": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm start",
+    "client": "cd client && npm run dev",
+    
+    "build-client": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
@@ -10,5 +16,8 @@
     "express": "^4.19.2",
     "nodemon": "^3.1.0",
     "notion-to-md": "^3.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
