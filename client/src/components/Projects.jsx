@@ -8,7 +8,7 @@ function Projects() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch("http://localhost:4000/projects");
+                const response = await fetch("https://portfolio-vitereact.onrender.com/projects");
                 const data = await response.json();
                 setProjects(data);
             } catch (error) {
