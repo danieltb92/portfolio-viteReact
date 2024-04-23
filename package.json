@@ -8,7 +8,7 @@
      
     "client": "cd client && npm install && npm run build",
     "build-client": "cd client && npm install && npm run build",
-    "deploy": "cd client && npm install && npm run build && cd .. && npm install && npm start"
+    "deploy": "cd client && npm install && npm run build && cd .. && npm install"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
