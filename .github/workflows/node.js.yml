@@ -8,6 +8,7 @@ on:
     branches: [ "prod" ]
   pull_request:
     branches: [ "prod" ]
+  
 
 jobs:
   build:
@@ -26,6 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+  
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
