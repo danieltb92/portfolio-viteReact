@@ -1,9 +1,8 @@
 const express = require('express');
-const { Client } = require('@notionhq/client');
 const cors = require('cors');
 const dotenv = require('dotenv');
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+// var bodyParser = require('body-parser');
+// var jsonParser = bodyParser.json();
 const getProjects = require('./api/notion');
 const getPagesMd = require('./api/notion-to-md');
 const path = require('path');
