@@ -12,7 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 const getPages = async () => {
   try {
     // Simulando la obtención de datos del servidor
-    const projects = await fetch('http://localhost:4000/pages-md');
+    const projects = await fetch('https://portfolio-vitereact.onrender.com/pages-md');
     const data = await projects.json();
 
     // Obteniendo datos de cada una de las paginas provenientes de la URL
