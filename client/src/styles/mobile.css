@@ -1,8 +1,8 @@
 /* @import "style.css"; */
 
-@media (max-width: 570px) {
+@media (max-width: 640px) {
 
-    body{
+    #root{
         margin: 0 1rem;
     }
     .container-navbar{

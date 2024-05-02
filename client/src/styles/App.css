@@ -1,6 +1,7 @@
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
+  margin: 0 3rem;
   /* padding: 0 2rem; */
   /* text-align: center */
 }
@@ -15,7 +16,7 @@
   
   top: 0;
   /* height: 10vh; */
-  /* max-width: 1200px; */
+  /* max-width: 1200px; */ 
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
@@ -99,11 +100,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   /* 6.24rem - 100px */
   position: relative;
-  height: 80vh;
+  /* height: 80vh; */
+  height: fit-content;
   z-index: 1;
+  gap: 30%;
+  /* padding-top: 10%; */
+
 }
 
 .hero {
@@ -118,7 +123,7 @@
   /* height: 40vh; */
 
   border-radius: 30px;
-  border: 2px dashed var(--container-hero-color);
+  /* border: 2px dashed var(--container-hero-color); */
   /* background-color: var(--white); */
   position: relative;
 }
@@ -469,9 +474,9 @@
   border: 1.234px solid var(--dove-gray-100);
 
   z-index: 1;
-background: linear-gradient(-45deg, red, green, var(--picton-blue-700), yellow);
-background-size: 400% 400%;
-animation: animate 10s ease infinite;
+  background: linear-gradient(-45deg, red, green, var(--picton-blue-700), yellow);
+  background-size: 400% 400%;
+  animation: animate 10s ease infinite;
 
   .container-lenguage{
       margin: 0 auto;
