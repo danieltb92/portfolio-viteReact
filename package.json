@@ -2,7 +2,7 @@
   "scripts": {
     "start": "nodemon server.js",
     
-    "start-sc": "concurrently \"npm run server\" \"npm run dev-client\"",
+    "start-dev": "concurrently \"npm run server\" \"npm run dev-client\"",
     "server": "npm start",
     "dev-client": "cd client && npm run dev",
      

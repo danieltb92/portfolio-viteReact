@@ -1,4 +1,5 @@
-import logoAvatar from '../assets/icons/logotype/Cute Avatar.svg'
+// import logoAvatar from '../assets/icons/logotype/Cute Avatar.svg'
+import logoAvatar from '../assets/icons/logotype/Cute Avatar2.svg'
 import githubIcon from '../assets/icons/social/bxl-github.svg'
 import linkedinIcon from '../assets/icons/social/bxl-linkedin.svg' 
 // import whatsappIcon from './assets/icons/social/bxl-whatsapp.svg'  

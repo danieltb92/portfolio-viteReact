@@ -114,7 +114,7 @@ function Navbar({ showMenuItems }) {
             <nav className={sidebarClassName}>
                 <header className="sidebar-header">
                     {/* Botón para cerrar la barra lateral */}
-                    <i className="btn-close button" onClick={toggleSidebar}>
+                    <i className="btn-close" onClick={toggleSidebar}>
                         <box-icon name='x' color='#FFFFFF' size='sm'></box-icon>
                     </i>
                 </header>
