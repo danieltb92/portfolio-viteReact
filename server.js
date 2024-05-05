@@ -30,7 +30,7 @@ app.get('/pages-md', async (req, res) => {
 // Ruta URL del Sitemap //
 
 app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/dist/sitemap.xml'))
+  res.sendFile(path.join(__dirname, 'client/sitemap.xml'))
 })
 
 app.use(express.static(path.join(__dirname, 'client', 'dist')));
