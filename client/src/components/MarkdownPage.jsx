@@ -13,7 +13,7 @@ const MarkdownPage = ({ content, title }) => {
     document.title = title;
   }, [title]);
   return (
-          <div className='markdown-page max-w-screen-lg'>
+          <div className='markdown-page max-w-screen-md'>
             <Navbar className='w-full' showMenuItems={false}></Navbar>
             <h1>{title}</h1>
             <ReactMarkdown>{content}</ReactMarkdown>
