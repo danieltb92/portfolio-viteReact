@@ -27,6 +27,12 @@ app.get('/pages-md', async (req, res) => {
   res.json(pagesMd)
 });
 
+// Ruta URL del Sitemap //
+
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/sitemap.xml'))
+})
+
 app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
 // Redirigir todas las rutas no reconocidas al index.html de React
