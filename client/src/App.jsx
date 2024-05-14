@@ -51,7 +51,7 @@ function App() {
 
   return (  // Retorna las rutas generales y las generadas con automatizacion
     <>
-      <div className="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_30%,#121212_50%,#00b2ff_100%)]"></div>
+      <div className="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_30%,#080808_50%,#00b2ff_150%)]"></div>
       <BrowserRouter>
         <ScrollToTop></ScrollToTop>
         <Routes>
