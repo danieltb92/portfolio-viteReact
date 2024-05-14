@@ -43,8 +43,8 @@ const ScrollToTopButton = () => {
                         padding: '15px 15px',
                         backgroundColor: 'rgba(255, 255, 255, 0.3)', // Fondo traslúcido
                         color: '#000',
-                        borderRadius: '20%', // Botón redondo
-                        border: '1px solid #000',
+                        borderRadius: '50%', // Botón redondo
+                        // border: '1px solid #000',
                         cursor: 'pointer',
                         backdropFilter: 'blur(5px)', // Aplica desenfoque al fondo
                         WebkitBackdropFilter: 'blur(5px)', // Compatibilidad con navegadores webkit
