@@ -42,7 +42,8 @@
         letter-spacing: -1px;
     }
     .hero h1 span{
-        font-size: 3rem; /*var(--text-size-h2)*/
+        font-size: 4rem; /*var(--text-size-h2)*/
+        line-height: inherit;
     }
     .container-footerHero{
         flex-direction: column-reverse;
