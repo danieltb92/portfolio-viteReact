@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
             {/* Solo muestra el botón si isVisible es true */}
             {isVisible && (
                 <button className='z-[9999] fixed bottom-[2rem] right-[1rem] p-[15px] rounded-[50%] cursor-pointer border-2 
-                    [backdropFilter:blur(5px), WebkitBackdropFilter:blur(5px)] border-white hover:bg-black'
+                    [backdropFilter:blur(5px)] [WebkitBackdropFilter:blur(5px)] border-white hover:bg-black'
                     onClick={scrollToTop}
                     // style={{
                     //     zIndex: '9999', // Ajustar el orden de las cosas
