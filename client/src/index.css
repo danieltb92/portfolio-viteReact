@@ -122,19 +122,19 @@ html {
   }
 
   .footerHero-links img {
-    filter: invert(50%);
+    filter: invert(60%);
   }
 
   .footerHero-links img:hover {
-    filter: opacity(100%);
+    filter: invert(100%)
   }
 
   .footer-links img {
-    filter: invert(50%);
+    filter: invert(60%);
   }
 
   .footer-links img:hover {
-    filter: opacity(100%);
+    filter: invert(100%);
   }
 
 }
