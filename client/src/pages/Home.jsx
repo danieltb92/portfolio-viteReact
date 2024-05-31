@@ -8,6 +8,7 @@ import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Footer from '../components/Footer'
 import ScrollToTopButton from '../components/ScrollToTopButton'
+import ToggleSwitch from '../components/ToggleSwitch';
 
 
 function Home() {
@@ -26,6 +27,7 @@ function Home() {
     <>
       <nav>
         <Navbar showMenuItems={true}></Navbar> 
+        <ToggleSwitch></ToggleSwitch>
       </nav>
       <main>
         <Hero></Hero>
