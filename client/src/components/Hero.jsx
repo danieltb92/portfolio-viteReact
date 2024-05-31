@@ -4,13 +4,14 @@ import githubIcon from '../assets/icons/social/bxl-github.svg'
 import linkedinIcon from '../assets/icons/social/bxl-linkedin.svg' 
 // import whatsappIcon from './assets/icons/social/bxl-whatsapp.svg'  
 import emailIcon from '../assets/icons/social/bx-envelope.svg' 
-import { basics, hero } from '../../cv.json'
+// import { basics, hero } from '../../cv.json'
+import { useTranslation } from 'react-i18next'
 
-const { firstname, lastname, label, label2 } = basics
-const { titleHero } = hero
+// const { firstname, lastname, label, label2 } = basics
+// const { titleHero, sublabel } = hero
 
 function Hero() {
-
+    const { t } = useTranslation();
     return (
     <section id="home" className="container-hero max-w-screen-xl">
         <div className="hero px-5 ">
@@ -18,9 +19,9 @@ function Hero() {
             <i className="dark-btn"><box-icon name='moon' color='#454545' ></box-icon></i> */}
             <img className="" src={logoAvatar} alt="Logo Avata"></img>
             <div className="hero-title w-[500px] m-5 max-md:w-full"> 
-                <h1 className="text-start">{titleHero}</h1> 
-                <h1 className="text-start"><span className="D text-primary">{firstname}</span></h1>
-                <h1 className="text-end"><span className="T text-primary">{lastname}</span></h1>
+                <h1 className="text-start">{t('hero.titleHero')}</h1> 
+                <h1 className="text-start"><span className="D text-primary">{t('basics.firstname')}</span></h1>
+                <h1 className="text-end"><span className="T text-primary">{t('basics.lastname')}</span></h1>
             </div>
         </div>
     
@@ -38,8 +39,8 @@ function Hero() {
             </div>
     
             <div className="footerHero-description">
-                <h3>{label}<br></br>{label2}</h3>
-                <h4>| design & code.</h4>
+                <h3>{t('hero.label')}<br></br>{t('hero.label2')}</h3>
+                <h4>{t('hero.sublabel')}</h4>
             </div>
         </div>
    </section>

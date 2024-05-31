@@ -21,7 +21,7 @@ function Projects() {
     return (
 
         <div id="proyectos" className="container-projects">
-            <h2>Proyectos</h2>
+            <h2>{t('projects.title')}</h2>
 
             <section className="grid-projects">
                 {projects.map((project) => (
@@ -32,7 +32,7 @@ function Projects() {
                                 <h3>{project.title}</h3>
                                 <div className="divider-card"></div>
                                 <p>{project.type}</p>
-                                <div className="w-auto flex flex-wrap gap-1" >
+                                <div className="w-auto flex gap-1" >
                                     {project.tags.map((tag) => (
                                         <div key={tag.id} className="tag">{tag.name}</div>
                                     ))}

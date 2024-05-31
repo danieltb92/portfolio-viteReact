@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 import githubIcon from '../assets/icons/social/bxl-github.svg'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
+// import { footer } from '../../cv.json'
+import { useTranslation } from 'react-i18next';
+
+// const { title } = footer
+
 
 function Footer() {
+    const { t } = useTranslation();
     // Función que desplaza la página a la parte superior
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -10,7 +16,7 @@ function Footer() {
     return (
         <footer id="contacto" className="container-footer">
             <section className="footer-contact">
-                <h3 className='text-center'>Contactame</h3>
+                <h3 className='text-center'>{t('footer.title')}</h3>
                 {/* <!-- <input type="email" name="Email" id="email" placeholder="Poner email"> --> */}
             </section>
 

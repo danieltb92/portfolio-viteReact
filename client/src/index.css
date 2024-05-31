@@ -149,13 +149,13 @@ a:hover {
   color: var(--white);
 }
 
-body {
+/* body {
    /* margin: 0 3rem; */
   /*display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh; */
-}
+  min-height: 100vh; 
+} */
 
 h1 {
   font-size: 3.2em;

@@ -36,8 +36,8 @@ const getPages = async () => {
 // Y las rutas de las paginas standard
 function App() {
 
-
   const [paginas, setPaginas] = useState([]);
+  
   // UseEffect para obtener los datos de la funcion anterior getPages de manera asincrona 
   useEffect(() => {
     const fetchPages = async () => {
@@ -49,9 +49,11 @@ function App() {
   }, []);
 
 
+
   return (  // Retorna las rutas generales y las generadas con automatizacion
     <>
       <div className="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_30%,#080808_50%,#00b2ff_150%)]"></div>
+      {/* <ToggleSwitch></ToggleSwitch> */}
       <BrowserRouter>
         <ScrollToTop></ScrollToTop>
         <Routes>

@@ -1,11 +1,20 @@
+// import {skills} from '../../cv.json';
+import { useTranslation } from 'react-i18next';
+//add const by propertie sections in skills JSON
+
+// const {title} = skills
+// const sections = skills.sections[0]
+// const sections2 = skills.sections[1]
+
 function Skills() {
+    const {t} = useTranslation();
     return (
         <section className="container-skills">
             <div className="title-skills">
-                <h2>Habilidades</h2>
+                <h2>{t('skills.title')}</h2>
             </div>
             <div className="container-skills-code">
-                <h3>Code</h3>
+                <h3>{t('skills.sections.0.title1')}</h3>
                 <div className="container-tags">
                     <div className="tag">+ HTML</div>
                     <div className="tag">+ CSS</div>
@@ -17,7 +26,7 @@ function Skills() {
                 </div>
             </div>
             <div className="container-skills-design">
-                <h3>Diseño</h3>
+                <h3>{t('skills.sections.1.title2')}</h3>
                 <div className="container-tags">
                     <div className="tag">+ UX-UI</div>
                     <div className="tag">+ Design System</div>
