@@ -3,8 +3,8 @@
       "name": "Daniel Tunjano",
       "firstname": "Daniel",
       "lastname": "Tunjano",
-      "label": "Diseñador UX UI, Industrial &",
-      "label2": "Desarrollador Fronted Jr.",
+      "label": "UX/UI, Industrial Designer &",
+      "label2": "Fronted Development Jr.",
       "image": "/me.webp",
       "email": "danieltb92@hotmail.com",
       "phone": "+57 3202190255",
@@ -36,28 +36,28 @@
       ]
     },
     "navbar":{
-      "home": "Inicio",
-      "about": "Sobre mí",
-      "work": "Proyectos",
-      "contact": "Contacto"
+      "home": "Home",
+      "about": "About me",
+      "work": "Projects",
+      "contact": "Contact"
     },
     "hero":{                    
-        "titleHero": "¡Hola!, soy",
-        "label": "Diseñador UX UI, Industrial &",
-        "label2": "Desarrollador Fronted Jr.",
+        "titleHero": "¡Hi!, I'm",
+        "label": "UX/UI, Industrial Designer &",
+        "label2": "Fronted Development Jr.",
         "sublabel": "| design & code."
       },
     "about": {
-      "title": "Sobre mí",
-      "description1": "¡Hola soy Daniel!, profesional en Diseño Industrial de la UAN, actualmente resido en la ciudad de Bogotá DC.",
-      "description2": "Mi campo productivo esta en el diseño y desarrollo de producto, tanto objetual como producto digital. En la actualidad mi enfoque esta en el diseño y desarrollo Web.",
-      "description3": "Me he especializado en diseño UI/UX. Me apasiona la forma en la que el diseño puede transformar y mejorar nuestras vidas atraves de objetos, interfaces, servicios etc.. Ademas tengo conocimientos en desarrollador web, en la parte fronted y en el backend, en la actualidad estoy ampliando mis habilidades en esta area.",
-      "description4": "Tener la prespectiva de los dos mundos tanto del diseño como del desarrollo me permite crear soluciones digitales funcionales, usables, efectivas y centradas en el usuario.",
-      "description5": "Si quieres contactarme enviame un email a",
-      "buttonCV": "Descargar mi CV"
+      "title": "About me",
+      "description1": "Hello, I'm Daniel!, a professional in Industrial Design from the UAN, I currently reside in the city of Bogotá DC.",
+      "description2": "My productive field is the design and development of products, both objects and digital. Currently my focus is on web design and development.",
+      "description3": "I have specialized in UI/UX design. I am passionate about the way design can transform and improve our lives through objects, interfaces, services, etc. I also have knowledge of web development, both front-end and back-end. I am currently expanding my skills in this field. area.",
+      "description4": "Having the perspective of both worlds of both design and development allows me to create functional, usable, effective and user-centered digital solutions.",
+      "description5": "If you want to contact me send me an email at",
+      "buttonCV": "Upload me CV"
     },
     "skills": {
-      "title": "Habilidades",
+      "title": "Skills",
       "sections": [
         {
           "title1": "Code",
@@ -73,7 +73,7 @@
           "tag9": "+ Git"
         },
         {
-          "title2": "Diseño",
+          "title2": "Design",
           "tags": "+ Industrial",
           "tag1": "+ UX/UI",
           "tag2": "+ Design System",
@@ -86,10 +86,10 @@
       ]
     },
     "projects": {
-      "title": "Proyectos"
+      "title": "Projects"
     },
     "footer": {
-      "title": "Contáctame"
+      "title": "Contact me"
     },
 
 
