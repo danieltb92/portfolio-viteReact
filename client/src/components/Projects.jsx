@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// import { projects } from '../../cv.json'
+import { useTranslation } from "react-i18next";
 
+
+// const { title } = projects
 
 function Projects() {
     const [projects, setProjects] = useState([]);
+    const { t } = useTranslation();
 
     useEffect(() => {
         async function fetchData() {
