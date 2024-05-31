@@ -6,22 +6,22 @@
       "label": "Diseñador UX UI, Industrial &",
       "label2": "Desarrollador Fronted Jr.",
       "image": "/me.webp",
-      "email": "miduga@gmail.com",
-      "phone": "+34 688888888",
-      "url": "https://midu.dev",
+      "email": "danieltb92@hotmail.com",
+      "phone": "+57 3202190255",
+      "url": "https://daniel-tunjano.onrender.com",
       "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
       "location": {
         "address": "",
-        "postalCode": "08820",
-        "city": "el Prat de Llobregat",
-        "countryCode": "ES",
-        "region": "España"
+        "postalCode": "",
+        "city": "Bogotá",
+        "countryCode": "CO",
+        "region": "Colombia"
       },
       "profiles": [
         {
           "network": "LinkedIn",
-          "username": "midudev",
-          "url": "https://linkedin.com/in/midudev"
+          "username": "daniel tunjano",
+          "url": "https://linkedin.com/in/daniel-tunjano"
         },
         {
           "network": "X",
@@ -30,24 +30,81 @@
         },
         {
           "network": "GitHub",
-          "username": "midudev",
-          "url": "https://github.com/midudev"
+          "username": "danieltb92",
+          "url": "https://github.com/danieltb92"
         }
       ]
     },
     "navbar":{
-       "home": "Inicio",
+      "home": "Inicio",
       "about": "Sobre mí",
       "work": "Proyectos",
       "contact": "Contacto"
     },
-    "hero":{
-        "titleHero": "¡Hola!, soy"
+    "hero":{                    
+        "titleHero": "¡Hola!, soy",
+        "label": "Diseñador UX UI, Industrial &",
+        "label2": "Desarrollador Fronted Jr.",
+        "sublabel": "| design & code."
       },
     "about": {
       "title": "Sobre mí",
-      "description": ""
+      "description1": "¡Hola soy Daniel!, profesional en Diseño Industrial de la UAN, actualmente resido en la ciudad de Bogotá DC.",
+      "description2": "Mi campo productivo esta en el diseño y desarrollo de producto, tanto objetual como producto digital. En la actualidad mi enfoque esta en el diseño y desarrollo Web.",
+      "description3": "Me he especializado en diseño UI/UX. Me apasiona la forma en la que el diseño puede transformar y mejorar nuestras vidas atraves de objetos, interfaces, servicios etc.. Ademas tengo conocimientos en desarrollador web, en la parte fronted y en el backend, en la actualidad estoy ampliando mis habilidades en esta area.",
+      "description4": "Tener la prespectiva de los dos mundos tanto del diseño como del desarrollo me permite crear soluciones digitales funcionales, usables, efectivas y centradas en el usuario.",
+      "description5": "Si quieres contactarme enviame un email a",
+      "buttonCV": "Descargar mi CV"
     },
+    "skills": {
+      "title": "Habilidades",
+      "sections": [
+        {
+          "title1": "Code",
+          "tags": "+ UX-UI" ,
+          "tag1": "+ HTML",
+          "tag2": "+ CSS",  
+          "tag3": "+ JavaScript",
+          "tag4": "+ React",
+          "tag5": "+ NodeJS",
+          "tag6": "+ Express",
+          "tag7": "+ Python",
+          "tag8": "+ Scrum",
+          "tag9": "+ Git"
+        },
+        {
+          "title2": "Diseño",
+          "tags": "+ Industrial",
+          "tag1": "+ UX/UI",
+          "tag2": "+ Design System",
+          "tag3": "+ Usability Testing",
+          "tag4": "+ UX Research",
+          "tag5": "+ Wireframing",
+          "tag6": "+ User Analysis",
+          "tag7": "+ Prototyping"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Proyectos"
+    },
+    "footer": {
+      "title": "Contáctame"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     "work": [
       {
@@ -125,7 +182,7 @@
       "url": "https://publication.com",
       "summary": "Description…"
     }],
-    "skills": [
+    "skills1": [
       {
         "name": "HTML",
         "level": "Master",
@@ -225,7 +282,7 @@
       "name": "Jane Doe",
       "reference": "Reference…"
     }],
-    "projects": [
+    "projects2": [
       {
         "name": "mars.codes",
         "isActive": true,
