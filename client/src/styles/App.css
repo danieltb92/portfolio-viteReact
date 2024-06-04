@@ -245,9 +245,9 @@
   filter: opacity(50%);
 }
 
-.footerHero-links img:hover {
+/* .footerHero-links img:hover {
   filter: opacity(100%);
-}
+} */
 
 
 .footerHero-description h3 {
@@ -436,12 +436,12 @@
   gap: 8px 11px;
   margin: 10px 0;
 
-  .tag{
+  /* .tag{
       width:wrapper;
       display: block;
       padding: 4px 8px;
 
-      /* background-color: var(--white); */
+      /* background-color: var(--white); 
       border:2px solid var(--dove-gray-800);
       border-radius: 5px;
 
@@ -450,7 +450,22 @@
       font-weight: 400;
       color: var(--p-color);
   }
+   */
 } 
+.tag{
+  width:wrapper;
+  display: block;
+  padding: 4px 8px;
+
+  /* background-color: var(--white); */
+  border:2px solid var(--dove-gray-800);
+  border-radius: 5px;
+
+  font-size: var(--text-size-btn-S);
+  font-family: var(--font-buttons);
+  font-weight: 400;
+  color: var(--p-color);
+}
 .container-skills-design{
   grid-area: c;
 }
@@ -553,10 +568,10 @@
 
   animation: reveal linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 40%;
+  animation-range: entry 40% cover 50%;
 }
 .project-card:hover{
-  box-shadow: 0 5px 35px 0px rgba(0,0,0,.2);
+  box-shadow: 0px 5px 15px 0px rgba(255, 255, 255, 0.4);
 }
 
 .project-card a{
@@ -659,7 +674,7 @@
 }
 .footer-links img{
   width: 30px;
-  filter:opacity(50%)
+  /* filter:opacity(50%) */
 }
 .container-whatsapp-email{
   font-size: var(--text-size-h4);
@@ -684,9 +699,9 @@
   color: var(--subTitle-2-color);
 
 }
-.footer-links img:hover{
+/* .footer-links img:hover{
   filter: opacity(100%);
-}
+} */
 .container-whatsapp-email a:hover{
   color: var(--black);
 }

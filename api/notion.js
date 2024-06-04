@@ -27,13 +27,14 @@ module.exports = async function getProjects(){
       name: page?.properties?.Name?.title?.[0]?.plain_text || null,
       cover: page?.properties?.Cover?.files?.[0]?.file.url || null,
       title: page?.properties?.TitleProject?.rich_text?.[0]?.plain_text || null,
-      type: page?.properties?.Type.rich_text?.[0]?.plain_text || null,
+      type: page?.properties?.Type?.rich_text?.[0]?.plain_text || null,
       url: page?.public_url || null,
       idPage: page?.id || null,
       // date: page.properties.Date.date.start,
       // tags: page.properties.Tags.rich_text[0].text.content,
       // description: page.properties.Description.rich_text[0].text.content,
       status: page?.properties?.Status?.select?.name || null,
+      tags: page?.properties?.Tags?.multi_select || null,
     }
   })
   // Si el codigo no funciona verificar que no hayan casilla de proyectos vacia en la base de datos de NOTION

@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// import { projects } from '../../cv.json'
+import { useTranslation } from "react-i18next";
 
+
+// const { title } = projects
 
 function Projects() {
     const [projects, setProjects] = useState([]);
+    const { t } = useTranslation();
 
     useEffect(() => {
         async function fetchData() {
@@ -21,7 +26,7 @@ function Projects() {
     return (
 
         <div id="proyectos" className="container-projects">
-            <h2>Proyectos</h2>
+            <h2>{t('projects.title')}</h2>
 
             <section className="grid-projects">
                 {projects.map((project) => (
@@ -32,6 +37,12 @@ function Projects() {
                                 <h3>{project.title}</h3>
                                 <div className="divider-card"></div>
                                 <p>{project.type}</p>
+                                <div className="w-auto flex gap-1 flex-wrap" >
+                                    {project.tags.map((tag) => (
+                                        <div key={tag.id} className="tag">{tag.name}</div>
+                                    ))}
+                                </div>
+                            
                             </Link>
                         </article>
                     )

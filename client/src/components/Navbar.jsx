@@ -3,68 +3,17 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/App.css'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
-import { navbar } from '../../cv.json'
+// import { basics, navbar } from '../../cv.json'
+import { useTranslation } from 'react-i18next';
 
-const { home, about, work, contact } = navbar
 
-// function Navbar({ showMenuItems }) {
-//     const [ showMenu, setShowMenu] = useState(false);
-
-//     useEffect(() => {
-//         setShowMenu(showMenuItems);
-//     }, [showMenuItems]);
-    
-//     return (
-//         <nav className='w-full'>
-//             <header className="container-navbar max-w-screen-xl">
-//                 <div className="container-navbar-logo">
-//                     <Link to="/">
-//                         <img className="navbar-logo" src={logoDT} alt="Logotipo Daniel Tunjano"></img>
-//                     </Link>
-//                     <span className="navbar-name"> {">"} Daniel Tunjano</span>
-//                 </div>
-//                 <i className="btn-menu">
-//                     <box-icon name='menu' animation='noe' color='#6d6d6d' size='md'></box-icon>
-//                 </i>
-
-//                 <nav className="navbar">
-//                     {showMenuItems && (
-//                         <>
-//                             <a className=" btn-nav" href="#home">Home</a>
-//                             <h3>|</h3>
-//                             <a className=" btn-nav" href="#proyectos">Proyectos</a>
-//                             <h3>|</h3>
-//                             <a className=" btn-nav" href="#sobreMi">Sobre mi</a>
-//                             <h3>|</h3>
-//                             <a className=" btn-nav" href="#contacto">Contacto</a>
-//                         </>
-//                     )}
-//                 </nav>
-//             </header>
-
-//             <nav className="sidebar">
-//                 <header className="sidebar-header">
-//                     <i className="btn-close button"><box-icon name='x' color='#FFFFFF' size='sm'></box-icon></i>
-//                 </header>
-//                 <ul className="sidebar-list">
-//                     <li> <a href="#home">Home</a></li>
-//                     <li> <a href="#proyectos">Proyectos</a></li>
-//                     <li> <a href="#sobreMi">Sobre mi</a></li>
-//                     <li> <a href="#contacto">Contacto</a></li>
-//                 </ul>
-//                 <img src="assets/Logotype/icon-white.svg" alt=""></img>
-//             </nav>
-//         </nav>
-//     )
-// }
-// Navbar.propTypes = {
-//     showMenuItems: PropTypes.bool.isRequired,
-//   };
-
-// export default Navbar;
-
+// const i18n = i18next
+// const { home, about, work, contact } = navbar
+// const { name } = basics
 
 function Navbar({ showMenuItems }) {
+    const { t } = useTranslation();
+
     // Estado para controlar si la barra lateral está activa o no
     const [isSidebarActive, setIsSidebarActive] = useState(false);
 
@@ -91,7 +40,7 @@ function Navbar({ showMenuItems }) {
                     <Link to="/">
                         <img className="navbar-logo" src={logoDT} alt="Logotipo Daniel Tunjano" />
                     </Link>
-                    <span className="navbar-name"> {">"} Daniel Tunjano</span>
+                    <span className="navbar-name"> {">"} {t('basics.name')}</span>
                 </div>
 
                 {/* Botón de menú de hamburguesa */}
@@ -102,10 +51,10 @@ function Navbar({ showMenuItems }) {
                 {/* Menú de navegación normal para pantallas grandes */}
                 {showMenu && (
                     <nav className="navbar">
-                        <a className="btn-nav" href="#home">{home}</a>
-                        <a className="btn-nav" href="#proyectos">{work}</a>
-                        <a className="btn-nav" href="#sobreMi">{about}</a>
-                        <a className="btn-nav" href="#contacto">{contact}</a>
+                        <a className="btn-nav" href="#home">{t('navbar.home')}</a>
+                        <a className="btn-nav" href="#proyectos">{t('navbar.work')}</a>
+                        <a className="btn-nav" href="#sobreMi">{t('navbar.about')}</a>
+                        <a className="btn-nav" href="#contacto">{t('navbar.contact')}</a>
                     </nav>
                 )}
             </header>
@@ -119,10 +68,10 @@ function Navbar({ showMenuItems }) {
                     </i>
                 </header>
                 <ul className="sidebar-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#sobreMi">Sobre mi</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#home">{t('navbar.home')}</a></li>
+                    <li><a href="#proyectos">{t('navbar.work')}</a></li>
+                    <li><a href="#sobreMi">{t('navbar.about')}</a></li>
+                    <li><a href="#contacto">{t('navbar.contact')}</a></li>
                 </ul>
                 {/* <img src="assets/Logotype/icon-white.svg" alt="Icono" className="mt-4" /> */}
             </nav>

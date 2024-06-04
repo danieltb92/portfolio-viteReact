@@ -1,11 +1,9 @@
 {
   "scripts": {
     "start": "nodemon server.js",
-    
     "start-dev": "concurrently \"npm run server\" \"npm run dev-client\"",
     "server": "npm start",
     "dev-client": "cd client && npm run dev",
-     
     "client": "cd client && npm install && npm run build",
     "build-client": "cd client && npm install && npm run build",
     "deploy": "cd client && npm install && npm run build && cd .. && npm install"
@@ -16,8 +14,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "i18next": "^23.11.5",
+    "i18next-http-backend": "^2.5.2",
     "nodemon": "^3.1.0",
-    "notion-to-md": "^3.1.1"
+    "notion-to-md": "^3.1.1",
+    "react-i18next": "^14.1.2"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

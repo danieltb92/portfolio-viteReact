@@ -3,7 +3,7 @@
       "name": "Daniel Tunjano",
       "firstname": "Daniel",
       "lastname": "Tunjano",
-      "label": "Diseñador UX UI, Industrial &",
+      "label": "Diseñador UX/UI, Industrial &",
       "label2": "Desarrollador Fronted Jr.",
       "image": "/me.webp",
       "email": "danieltb92@hotmail.com",
@@ -43,7 +43,7 @@
     },
     "hero":{                    
         "titleHero": "¡Hola!, soy",
-        "label": "Diseñador UX UI, Industrial &",
+        "label": "Diseñador UX/UI, Industrial &",
         "label2": "Desarrollador Fronted Jr.",
         "sublabel": "| design & code."
       },
