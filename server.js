@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4000;
 const HOST = process.env.HOST || 'localhost';
 
 const app = express();
-app.use(express.static('public'))
+app.use(express.static('dist'))
 app.use(cors());
 
 // Ruta URL del json de los proyectos de la API en Notion  //
@@ -26,6 +26,11 @@ app.get('/pages-md', async (req, res) => {
   // console.log(pagesMd)
   res.json(pagesMd)
 });
+
+// Ruta imagen Open Graph
+app.get('/images/meta-img-portfolio.png', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/public/images/meta-img-portfolio.png'))
+})
 
 // Ruta URL del Sitemap //
 
