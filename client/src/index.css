@@ -82,8 +82,8 @@ html {
   --background: #121212;
   --background-card: #1E1E1E;
   --title-main-color: var(--white);
-  --subTitle-color: var(--dove-gray-300);
-  --subTitle-2-color: var(--dove-gray-500);
+  --subTitle-color: rgba( 255, 255, 255, 0.9);;
+  --subTitle-2-color: rgba( 255, 255, 255, 0.5);;
   --p-color: var(--white);
   --container-hero-color: var(--dove-gray-900);
   --acent-color: var(--picton-blue-300);
