@@ -3,13 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/App.css'
 import logoDT from '../assets/icons/logotype/logoDT.svg'
-// import { basics, navbar } from '../../cv.json'
 import { useTranslation } from 'react-i18next';
 
-
-// const i18n = i18next
-// const { home, about, work, contact } = navbar
-// const { name } = basics
 
 function Navbar({ showMenuItems }) {
     const { t } = useTranslation();
@@ -73,7 +68,6 @@ function Navbar({ showMenuItems }) {
                     <li><a href="#sobreMi">{t('navbar.about')}</a></li>
                     <li><a href="#contacto">{t('navbar.contact')}</a></li>
                 </ul>
-                {/* <img src="assets/Logotype/icon-white.svg" alt="Icono" className="mt-4" /> */}
             </nav>
         </nav>
     );
