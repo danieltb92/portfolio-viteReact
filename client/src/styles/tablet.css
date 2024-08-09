@@ -15,21 +15,40 @@
     /* <---- SIDEBAR ----> */
     .active{
         display: block;
+             
     }
+    
     .sidebar{
-        background-color: var(--picton-blue-900);
+        /* background-color: var(--picton-blue-900);
         height: 100vh;
         z-index: 20;
         position: fixed;
         top: 0;
         right: 0;
-        opacity: 90%;
+        opacity: 90%; */
+
+        background-color: #ebebee;
+        height: max-content;
+        z-index: 1000;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        transition: right 5s ease, opacity 0.3s ease;
+        opacity: 0; /* Inicialmente invisible */
 
         .sidebar-header{
             display: flex;
             justify-content:space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 30px 40px 0px;
         }
         .sidebar-header .button{
             cursor: pointer;
@@ -39,18 +58,19 @@
             display: flex;
             flex-direction: column;
             justify-content: start;
-            padding: 20px 40px;
-            gap: 10px;
+            padding: 20px 20px 60px 20px;
+            gap: 20px;
+            
         }
         .sidebar-list li {
             list-style-type: none;
         }
-        .sidebar-list li a{
-            text-decoration: none;
-            font-family:var(--font-body);
-            font-size: var(--text-size-h3);
-            color: var(--white);
+        .sidebar-list a {
+            color: #6d6d6d;
+            font-size: medium;
+            font-weight: 400;
         }
+        
     }
     .sidebar img{
         width: 50px;
@@ -60,6 +80,10 @@
         filter: opacity(20%);
     }
 
+    .sidebar.active{
+        right: 0;
+        opacity: 1; /* Visible cuando está activo */   
+    }
 
     /* <---- HERO ----> */
 
