@@ -18,7 +18,8 @@
     "i18next-http-backend": "^2.5.2",
     "nodemon": "^3.1.0",
     "notion-to-md": "^3.1.1",
-    "react-i18next": "^14.1.2"
+    "react-i18next": "^14.1.2",
+    "vaul": "^0.9.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
