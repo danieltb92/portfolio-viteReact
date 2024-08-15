@@ -13,8 +13,9 @@ function ToggleSwitch() {
 
     return (
         <div className="toggle-switch max-w-screen-xl m-auto">
-            <label className="switch">
+            <label className="switch" htmlFor="toggle-language">
                 <input 
+                    id="toggle-language"
                     type="checkbox" 
                     onChange={toggleLanguage} 
                     checked={i18n.language === 'es'} 
