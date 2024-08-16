@@ -155,14 +155,14 @@
 
 .footerHero-links img {
   width: 30px;
-  filter: opacity(50%);
+  filter: opacity(90%);
 }
 
 .footerHero-description h3 {
   font-family: var(--font-headings);
   font-size: var(--text-size-h3);
   text-align: end;
-  color: var(--subTitle-color);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: bold;
 }
 
@@ -170,7 +170,7 @@
   font-family: var(--font-headings);
   font-size: var(--text-size-h4);
   text-align: end;
-  color: var(--subTitle-2-color);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
 
   padding: 20px 0;
@@ -550,16 +550,16 @@
   text-decoration: none;
   font-size: var(--text-size-h4);
   font-family: var(--font-headings);
-  color: var(--dove-gray-300);
+  color: rgba(255,255,255,0.9);
 }
 .container-footer h5{
   font-size: var(--text-size-p);
   font-family: var(--font-body);
   padding: 20px;
-  color: var(--subTitle-2-color);
+  color: rgba(255,255,255,0.8);
 
 }
 
 .container-whatsapp-email a:hover{
-  color: var(--white);
+  color: rgba(255,255,255,0.4);
 }

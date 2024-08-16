@@ -29,7 +29,7 @@ html {
   --dove-gray-50: #f6f6f6;
   --dove-gray-100: #e7e7e7;
   --dove-gray-200: #d1d1d1;
-  --dove-gray-300: #b0b0b0;
+  --dove-gray-300: rgb(176, 176, 176);
   --dove-gray-400: #888888;
   --dove-gray-500: #6d6d6d;
   --dove-gray-600: #5d5d5d;
@@ -122,19 +122,19 @@ html {
   }
 
   .footerHero-links img {
-    filter: invert(60%);
+    filter: invert(90%);
   }
 
   .footerHero-links img:hover {
-    filter: invert(100%)
+    filter: invert(40%)
   }
 
   .footer-links img {
-    filter: invert(60%);
+    filter: invert(90%);
   }
 
   .footer-links img:hover {
-    filter: invert(100%);
+    filter: invert(40%);
   }
 
 }
