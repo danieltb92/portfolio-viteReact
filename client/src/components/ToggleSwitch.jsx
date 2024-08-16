@@ -19,6 +19,7 @@ function ToggleSwitch() {
                     type="checkbox" 
                     onChange={toggleLanguage} 
                     checked={i18n.language === 'es'} 
+                    aria-labelledby='toggle-language-label'
                 />
                 <span className="slider round"></span>
             </label>
