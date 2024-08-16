@@ -33,9 +33,13 @@ app.get('/images/meta-img-portfolio.png', (req, res) => {
 })
 
 // Ruta URL del Sitemap //
-
 app.get('/sitemap.xml', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/sitemap.xml'))
+})
+
+// Ruta URL del Robots //
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/robots.txt'))
 })
 
 app.use(express.static(path.join(__dirname, 'client', 'dist')));
