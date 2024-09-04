@@ -43,7 +43,7 @@ function Projects() {
                                 <h3>{project.title}</h3>
                                 <div className="divider-card"></div>
                                 <p>{project.type}</p>
-                                <div className="w-auto flex gap-1 flex-wrap" >
+                                <div className="w-auto flex gap-1 flex-wrap pl-2" >
                                     {project.tags.map((tag) => (
                                         <div key={tag.id} className="tag">{tag.name}</div>
                                     ))}
