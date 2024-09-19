@@ -33,11 +33,17 @@ function Projects() {
                     project.status === 'Published' && (
                         <article className="project-card" key={project.id}>
                             <Link to={`/page/${project.id}`}>
-                                <img src={project.cover} alt="imagen proyecto" />
+                                <img 
+                                    src={project.cover}
+                                    alt={`Imagen del proyecto ${project.title}`}
+                                    loading="lazy"
+                                    width="300" // Añadir dimensiones conocidas para mejorar la experiencia de carga
+                                    height="200" 
+                                />
                                 <h3>{project.title}</h3>
                                 <div className="divider-card"></div>
                                 <p>{project.type}</p>
-                                <div className="w-auto flex gap-1 flex-wrap" >
+                                <div className="w-auto flex gap-1 flex-wrap pl-2" >
                                     {project.tags.map((tag) => (
                                         <div key={tag.id} className="tag">{tag.name}</div>
                                     ))}

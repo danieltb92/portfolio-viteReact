@@ -1,0 +1,30 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cart/
+Disallow: /checkout/
+
+# Bloquear parámetros de búsqueda para evitar contenido duplicado
+Disallow: /*?s=
+Disallow: /*?search=
+
+# Bloquear rastreo de URLs con ciertos parámetros
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+
+# Permitir el rastreo de archivos CSS y JS
+Allow: /wp-content/themes/*.css
+Allow: /wp-content/themes/*.js
+Allow: /wp-content/plugins/*.css
+Allow: /wp-content/plugins/*.js
+
+# Evitar el rastreo de feeds
+Disallow: /feed/
+Disallow: /comments/feed/
+
+# Sitemap (ubicación del sitemap para los rastreadores)
+Sitemap: https://daniel-tunjano.onrender.com/sitemap.xml

@@ -1,22 +1,16 @@
 // import logoAvatar from '../assets/icons/logotype/Cute Avatar.svg'
-import logoAvatar from '../assets/icons/logotype/Cute Avatar2.svg'
+import logoAvatar from '../../public/images/Cute Avatar.svg'
 import githubIcon from '../assets/icons/social/bxl-github.svg'
 import linkedinIcon from '../assets/icons/social/bxl-linkedin.svg' 
-// import whatsappIcon from './assets/icons/social/bxl-whatsapp.svg'  
 import emailIcon from '../assets/icons/social/bx-envelope.svg' 
-// import { basics, hero } from '../../cv.json'
 import { useTranslation } from 'react-i18next'
 
-// const { firstname, lastname, label, label2 } = basics
-// const { titleHero, sublabel } = hero
 
 function Hero() {
     const { t } = useTranslation();
     return (
     <section id="home" className="container-hero max-w-screen-xl">
         <div className="hero px-5 ">
-            {/* <i className="light-btn"><box-icon name='sun' color='#e7e7e7'></box-icon></i>
-            <i className="dark-btn"><box-icon name='moon' color='#454545' ></box-icon></i> */}
             <img className="" src={logoAvatar} alt="Logo Avata"></img>
             <div className="hero-title w-[500px] m-5 max-md:w-full"> 
                 <h1 className="text-start">{t('hero.titleHero')}</h1> 

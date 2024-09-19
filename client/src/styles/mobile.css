@@ -1,5 +1,3 @@
-/* @import "style.css"; */
-
 @media (max-width: 640px) {
 
     #root{
@@ -17,7 +15,6 @@
     /* <---- HERO ----> */
 
     .container-hero{
-        /* height: auto; */
         margin-bottom: 20px;
     }
     .hero{
@@ -32,7 +29,6 @@
     }
     .hero-title{
         width: 80%;
-        /* align-items: center; */
         margin: 0px;
         padding: 0px;
     }
@@ -93,11 +89,6 @@
         margin-right: 0;
         width: 100%;
     }
-    /* .container-aboutme .button{
-        height: 50px;
-        width: 50px;
-        padding: 0;
-    } */
 
     /* <---- SKILLs ----> */
     .container-skills{
@@ -114,6 +105,7 @@
     }
     .container-skills-lenguage{
         margin-left: 0;
+        margin-top: 30px;
     }
 
      /* <---- PROJECTS ----> */

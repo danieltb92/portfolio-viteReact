@@ -1,10 +1,15 @@
 import '../styles/markdownPage.css'
-import ReactMarkdown from 'react-markdown';
-import { useEffect } from 'react';
+// import ReactMarkdown from 'react-markdown';
+import { useEffect, Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Divider from '../components/Divider';
+// import Navbar from '../components/Navbar';
+// import Footer from '../components/Footer';
+// import Divider from '../components/Divider';
+
+const Navbar = lazy(() => import('./Navbar'));
+const Footer = lazy(() => import('./Footer'));
+const ReactMarkdown = lazy(() => import('react-markdown'));
+const Divider = lazy(() => import('./Divider'));
 
 const MarkdownPage = ({ content, title }) => {
    // useEffect para modificar el título de la pestaña del navegador.
@@ -14,11 +19,13 @@ const MarkdownPage = ({ content, title }) => {
   }, [title]);
   return (
           <div className='markdown-page max-w-screen-md'>
-            <Navbar className='w-full' showMenuItems={false}></Navbar>
-            <h1>{title}</h1>
-            <ReactMarkdown>{content}</ReactMarkdown>
-            <Divider></Divider>
-            <Footer></Footer>
+            <Suspense fallback={<div></div>}>
+              <Navbar className='w-full' showMenuItems={false}></Navbar>
+              <h1>{title}</h1>
+              <ReactMarkdown>{content}</ReactMarkdown>
+              <Divider></Divider>
+              <Footer></Footer>
+            </Suspense>
             <style>
               {`
               .markdown-page {

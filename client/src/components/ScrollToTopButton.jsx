@@ -33,7 +33,7 @@ const ScrollToTopButton = () => {
         <>
             {/* Solo muestra el botón si isVisible es true */}
             {isVisible && (
-                <button className='z-[9999] fixed bottom-[2rem] right-[1rem] p-[15px] rounded-[50%] cursor-pointer border-2 
+                <button className='z-[9999] fixed bottom-[5rem] right-[1rem] p-[15px] rounded-[50%] cursor-pointer border-2 
                     [backdropFilter:blur(5px)] [WebkitBackdropFilter:blur(5px)] border-white hover:bg-black'
                     onClick={scrollToTop}
                     // style={{
