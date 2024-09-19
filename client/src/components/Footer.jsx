@@ -26,19 +26,19 @@ function Footer() {
                 <div className="container-whatsapp-email">
 
                     <a href="https://api.whatsapp.com/send?phone=573202190255&text=Hola!%20Me%20interesa%20saber%20mas%20sobre...%E2%80%A6" target="_blank" rel="noopener">
-                        <h6>Whatsapp</h6>
+                        <h4>Whatsapp</h4>
                     </a>
 
-                    <h6>|</h6>
+                    <h4>|</h4>
 
                     <a href="mailto:danieltb92@hotmail.com" target="_blank" rel="noopener">
-                        <h6>Email</h6>
+                        <h4>Email</h4>
                     </a>
 
-                    <h6>|</h6>
+                    <h4>|</h4>
 
                     <a href="https://github.com/danieltb92" target="_blank" rel="noopener">
-                        <h6>Linkedin</h6>
+                        <h4>Linkedin</h4>
                     </a>
                 </div>
 
