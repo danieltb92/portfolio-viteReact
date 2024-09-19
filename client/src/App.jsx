@@ -3,12 +3,9 @@ import './styles/mobile.css';
 import './styles/tablet.css';
 import { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-// import { useTranslation } from 'react-i18next';
 import Home from './pages/Home';
 import MarkdownPage from './components/MarkdownPage';
 import ScrollToTop from './components/ScrollToTop';
-// import ToggleSwitch from './components/ToggleSwitch';
-
 
 
 // Función para obtener las páginas desde la fuente de datos URL 
