@@ -1,7 +1,9 @@
 import '../styles/markdownPage.css'
-// import ReactMarkdown from 'react-markdown';
 import { useEffect, Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
+import rehypeRaw from 'rehype-raw';
+// import remarkGfm from 'remark-gfm';
+// import ReactMarkdown from 'react-markdown';
 // import Navbar from '../components/Navbar';
 // import Footer from '../components/Footer';
 // import Divider from '../components/Divider';
@@ -11,18 +13,25 @@ const Footer = lazy(() => import('./Footer'));
 const ReactMarkdown = lazy(() => import('react-markdown'));
 const Divider = lazy(() => import('./Divider'));
 
+// Componente para renderizar pagina en markdown a react
 const MarkdownPage = ({ content, title }) => {
    // useEffect para modificar el título de la pestaña del navegador.
    useEffect(() => {
     // Cambia el título del documento al título proporcionado.
     document.title = title;
   }, [title]);
+
   return (
           <div className='markdown-page max-w-screen-md'>
             <Suspense fallback={<div></div>}>
               <Navbar className='w-full' showMenuItems={false}></Navbar>
               <h1>{title}</h1>
-              <ReactMarkdown>{content}</ReactMarkdown>
+              <ReactMarkdown 
+                // remarkPlugins={[remarkGfm]} // Soporte para sintaxis extendida de GitHub Markdown
+                rehypePlugins={[rehypeRaw]} // Permite renderizar etiquetas HTML como <iframe> o <video>
+                >
+                {content}
+              </ReactMarkdown>
               <Divider></Divider>
               <Footer></Footer>
             </Suspense>
