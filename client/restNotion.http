@@ -3,3 +3,11 @@ GET http://localhost:4000/pages-md HTTP/1.1
 ###
 
 GET http://localhost:4000/projects HTTP/1.1
+
+###
+
+GET https://daniel-tunjano.onrender.com/projects HTTP/1.1
+
+###
+
+GET https://daniel-tunjano.onrender.com/pages-md HTTP/1.1
