@@ -1,13 +1,20 @@
 {
   "scripts": {
-    "start": "nodemon server.js",
+    "server": "nodemon server.js",
     "start-dev": "concurrently \"npm run server\" \"npm run dev-client\"",
-    "server": "npm start",
     "dev-client": "cd client && npm run dev",
     "client": "cd client && npm install && npm run build",
     "build-client": "cd client && npm install && npm run build",
     "deploy": "cd client && npm install && npm run build && cd .. && npm install",
-    "preview": "cd client && npm run build && npm run preview"
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "prod": "concurrently \"npm run server:prod\" \"npm run client:prod\"",
+    "server:dev": "cross-env NODE_ENV=development nodemon server.js",
+    "server:prod": "cross-env NODE_ENV=production nodemon server.js",
+    "client:dev": "cd client && npm run dev",
+    "client:prod": "cd client && npm run build",
+    "build": "cd client && npm run build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "preview": "cd client && npm run preview"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
@@ -22,6 +29,7 @@
     "react-i18next": "^14.1.2"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "cross-env": "^10.0.0"
   }
 }
