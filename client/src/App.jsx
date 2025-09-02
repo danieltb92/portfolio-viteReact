@@ -11,8 +11,12 @@ import ScrollToTop from './components/ScrollToTop';
 // Función para obtener las páginas desde la fuente de datos URL 
 const getPages = async () => {
   try {
-    // Simulando la obtención de datos del servidor
-    const projects = await fetch('https://daniel-tunjano.onrender.com/pages-md');
+    const apiUrl = import.meta.env.VITE_API_URL;
+    // console.log(`${apiUrl}+"apiUrl en App.jsx"`);
+    // Simulando la obtención de datos del servidor 
+    // const projects = await fetch('https://daniel-tunjano.onrender.com/pages-md');
+    const projects = await fetch(`${apiUrl}pages-md`);
+
     const data = await projects.json();
 
     // Obteniendo datos de cada una de las paginas provenientes de la URL

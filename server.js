@@ -7,8 +7,8 @@ const getProjects = require('./api/notion');
 const getPagesMd = require('./api/notion-to-md');
 const path = require('path');
 
-const PORT = process.env.PORT || 4000;
-const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.VITE_PORT || 4000; ;
+const HOST = process.env.VITE_HOST || 'localhost';
 
 const app = express();
 app.use(express.static('dist'))
@@ -49,6 +49,10 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 });
 
+// app.listen(PORT, () => {
+//   console.log("Server running on port http://" + HOST + ":" + PORT);
+// });
+
 app.listen(PORT, () => {
-  console.log("Server running on port http://" + HOST + ":" + PORT);
+  console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on http://${HOST}:${PORT}`);
 });
