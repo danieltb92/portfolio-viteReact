@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --mode develoment",
+    "build": "vite build --mode production",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.2",
     "react-markdown": "^9.0.1",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "rehype-raw": "^7.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
